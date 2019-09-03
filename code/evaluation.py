@@ -33,7 +33,7 @@ def format_bioasq2treceval_qret(qret_data, filename):
 
 def trec_evaluate(qrels_file, qret_file, eval_name):
 	trec_eval_res = subprocess.Popen(#os.path.dirname(os.path.realpath(__file__)) + '/./trec_eval
-		['../code_cssm_cw/eval/trec_eval', '-m', 'all_trec', qrels_file, qret_file],
+		['../code/eval/trec_eval', '-m', 'all_trec', qrels_file, qret_file],
 		stdout=subprocess.PIPE, shell=False)
 	(out, err) = trec_eval_res.communicate()
 	trec_eval_res = out.decode("utf-8")
