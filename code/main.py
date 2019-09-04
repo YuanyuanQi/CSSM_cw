@@ -67,7 +67,7 @@ if args.function == 'constant':#alpha=0.1,beta=0.15,wind=30,c=15
 			prediction_score[qid] = {'docno':[],'y_pred':[]}
 		prediction_score[qid]['docno']=value['docno']
 		prediction_score[qid]['y_pred'].append(y_pred)
-elif args.function == 'linear function':#alpha=0.1,beta=0.2,cons_a=8/9,cons_b=7/1,c=15
+elif args.function == 'linear function':#alpha=0.15,beta=0.25,wind=30,cons_a=10,cons_b=1,c=35/45
 	for qid,value in prediction_data.items():
 		count += 1
 		print 'processing qid %s: %d / %d'%(qid,count,len(prediction_data))
