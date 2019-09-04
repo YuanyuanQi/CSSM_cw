@@ -54,7 +54,7 @@ wind = args.window_width
 prediction_data = data_loader.load_qrets(qrets_path)
 prediction_score ={}
 count=0
-if args.function == 'constant':#alpha=0.1,beta=0.05,wind=30,c=15
+if args.function == 'constant':#alpha=0.1,beta=0.15,wind=30,c=15
 	print args.function
 	for qid,value in prediction_data.items():
 		count += 1
