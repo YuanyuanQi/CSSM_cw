@@ -85,7 +85,7 @@ elif args.function == 'gaussin function':#alpha=0.05,beta=0.15,cons_a=5,cons_b=0
 		print 'processing qid %s: %d / %d'%(qid,count,len(prediction_data))
 		y_pred =[]
 		for docno in value['docno']:
-			doc_scores = score.cw_lf(w2v,query_path, qid, doc_path, docno, args.cons_a, args.cons_b, args.alpha, args.C)
+			doc_scores = score.cw_gf(w2v,query_path, qid, doc_path, docno, args.cons_a, args.cons_b, args.alpha, args.C)
 			y_pred.append(doc_scores)
 		if qid not in prediction_score:
 			prediction_score[qid] = {'docno':[],'y_pred':[]}
