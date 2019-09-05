@@ -102,7 +102,7 @@ def cw_gf(w2v,query_path, qid, doc_path, docno, a, b, alpha, C):
 	co = len(set(qry_list)&set(words))
 	Doc_Score =[]
 	
-	temp = doc_np.dot(query_np.T)/np.outer(np.linalg.norm(doc_np, axis=1),np.linalg.norm(query_np, axis=1))#doc_len*query_len
+	temp = query_np.dot(query_np.T)/np.outer(np.linalg.norm(query_np, axis=1),np.linalg.norm(query_np, axis=1))#query_np*query_len
 	if len(qry_list) > 2:
 		wind = (a+1)*int(round(np.mean(temp)/(np.var(temp)*math.sqrt(2))))+b
 		# wind = len(qry_list)*(int(round(np.mean(temp)/(np.std(temp)*math.sqrt(2))))+Cons_2)#
